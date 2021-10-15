@@ -8,13 +8,13 @@ public class PlayerController : MonoBehaviour
     public float playerSpeed;
     private Rigidbody2D rigBod;
     private Vector2 playerDirection;
-    
+    [SerializeField] private GameObject flashLight;
 
 
     void Start()
-    {
+    { 
         rigBod = GetComponent<Rigidbody2D>();
-       
+        flashLight.SetActive(false);
     }
 
     // Update is called once per frame
@@ -30,14 +30,20 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
 
     {
-
         //anything that must be applied to rb2d must be applied in fixed update
         rigBod.velocity = new Vector2(playerDirection.x * playerSpeed, playerDirection.y * playerSpeed);
-
-
-       
-        }
     }
+
+    void PowerFlashLight()
+    {
+        //TODO get user input from key f to set flashlight active & inactive
+    }
+
+    void MoveFlashLight()
+    {
+        //TODO get user input from keys to rotate the flashlight around the player
+    }
+}
 
 
 
