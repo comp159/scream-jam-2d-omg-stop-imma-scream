@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
         float directionX = Input.GetAxisRaw("Horizontal");
         // .normalized will ensure consistency of players movements
         playerDirection = new Vector2(directionX, directionY).normalized;
+        PowerFlashLight(); //checks for when the user is turning on and off the flashlight
     }
 
     void FixedUpdate()
@@ -36,7 +37,20 @@ public class PlayerController : MonoBehaviour
 
     void PowerFlashLight()
     {
-        //TODO get user input from key f to set flashlight active & inactive
+        if (Input.GetKeyDown(KeyCode.F)) //checks if user is pressing the f key
+        {
+            //Debug.Log("User is pressing f");
+            if (flashLight.activeInHierarchy == true) //turns off flashlight
+            {
+                //Debug.Log("Off");
+                flashLight.SetActive(false);
+            }
+            else //turns on flashlight
+            {
+                //Debug.Log("On");
+                flashLight.SetActive(true);
+            }
+        }
     }
 
     void MoveFlashLight()
