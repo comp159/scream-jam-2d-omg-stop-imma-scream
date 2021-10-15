@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rigBod;
     private Vector2 playerDirection;
     [SerializeField] private GameObject flashLight;
-
+    private float rotateDegree = 90f;
 
     void Start()
     { 
@@ -25,7 +25,10 @@ public class PlayerController : MonoBehaviour
         float directionX = Input.GetAxisRaw("Horizontal");
         // .normalized will ensure consistency of players movements
         playerDirection = new Vector2(directionX, directionY).normalized;
+        
+        
         PowerFlashLight(); //checks for when the user is turning on and off the flashlight
+        MoveFlashLight(); //checks for when the user is rotating the flashlight (only while it is on)
     }
 
     void FixedUpdate()
@@ -35,6 +38,7 @@ public class PlayerController : MonoBehaviour
         rigBod.velocity = new Vector2(playerDirection.x * playerSpeed, playerDirection.y * playerSpeed);
     }
 
+    ////////////////////////////////////Flashlight stuff/////////////////////////////////////////////////
     void PowerFlashLight()
     {
         if (Input.GetKeyDown(KeyCode.F)) //checks if user is pressing the f key
@@ -55,11 +59,16 @@ public class PlayerController : MonoBehaviour
 
     void MoveFlashLight()
     {
-        //TODO get user input from keys to rotate the flashlight around the player
+        if (flashLight.activeInHierarchy == true) //makes sure that flashlight is actually on
+        {
+            if (Input.GetKeyDown(KeyCode.Q)) //rotates flashlight left
+            {
+                flashLight.transform.Rotate(0,0,rotateDegree);
+            }
+            else if (Input.GetKeyDown(KeyCode.E)) //rotates flashlight right
+            {
+                flashLight.transform.Rotate(0,0,-rotateDegree);
+            }
+        }
     }
 }
-
-
-
-
-
