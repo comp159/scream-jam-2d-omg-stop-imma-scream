@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 27480011}
   - component: {fileID: 27480010}
   - component: {fileID: 27480009}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap_Stairs
   m_TagString: Stairs
   m_Icon: {fileID: 0}
@@ -530,7 +530,7 @@ GameObject:
   - component: {fileID: 91991300}
   - component: {fileID: 91991299}
   - component: {fileID: 91991301}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tilemap_Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28808,6 +28808,92 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &660125180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 660125182}
+  - component: {fileID: 660125181}
+  m_Layer: 0
+  m_Name: A Star Algorithm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &660125181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660125180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAACAn+ulDXwgTwIAAPcEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMuS2jAQ/BVK57CFDQlFbolh2RxYqCVbe/FFyGOsQpZceiyv4t8zkm3ssCdEd8+o5yFfCZemAmaVXmqerVQG5OeA+DP5NujIFzjRvZJbfoFW88EzW3gRDZo3arlCPPJhRpVgNWe/5F548QhBJ3mudLnI9pAoYw3CORUGkNLK+miJ0HVATvgznPmQM57iqT9d8DQbDW54ZCAt6E7aCodxK6x1TjJBywoyb7qTx9/bgCafxHoaiffOlBDcNGaIPVeh2IRWxmEpKMg4xeKCg+hpjEABfF9Yn7ofvs5zA7bxp+l5zjV2qc5Lfqu6dSU1h9raJxUuWJjFwVWddPWFH0aBzrUqX9p7o5G/wxacHd7omVFje73tw/Oe9dChIxUHuhPwUYB8VUutnMyQtNr5UGcgnnd/76UlBbBDh9dWH0BXfZ1QOx9fwy1Uf0oEL3eeeprUwFao0PEwf9A4mz9oOGyHaVIg6l28G/hL9/01aohnro1FqqlSens75bSXkkXoma/G2URpCQFuTFcgqbDnDaaxjyN84HrXPjDP1D+Y5vKGa9/BQ0iAO/1o9EBt1PE+LFOo4wpMsXZWcAmdaU+8Yp8SJWW9Yf2etGFbp3PKemF7x7P/V4vM4ohOaTyFcQyT3SQe5vl0gq6i8YSxfPYjImH3uMQ6qdjURpv24NRkl1zinrXfkcFS0ypse6bpcckvpeq1nMtcbZkGkOs6w904aLwE32W2yDg2aAvWchnmTa4pEYodIEvvidJQ6eJkNU27LCmp+KeyHklJEj4cKbmR2z9QSwMEFAAACAgAAICf67icS7xtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTVUVBKL0osyCgGihiCOKWZKSB2tJKlkWGieaKReaqxUapJkomRblqauYmhgYGhsUlycpqlmaFSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAICf66UNfCBPAgAA9wQAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAICf67icS7xtAAAAeAAAAAkAJAAAAAAAAAAAAAAAnAIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABUAwAAAAA=
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames: []
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 10
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
+--- !u!4 &660125182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660125180}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &673990834
 GameObject:
   m_ObjectHideFlags: 0
@@ -28818,7 +28904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 673990836}
   - component: {fileID: 673990835}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28941,7 +29027,7 @@ GameObject:
   - component: {fileID: 744062802}
   - component: {fileID: 744062804}
   - component: {fileID: 744062803}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap_Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88005,7 +88091,7 @@ GameObject:
   - component: {fileID: 940336935}
   - component: {fileID: 940336937}
   - component: {fileID: 940336936}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilempa_Walls_No_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89280,7 +89366,7 @@ GameObject:
   - component: {fileID: 1073715439}
   - component: {fileID: 1073715438}
   - component: {fileID: 1073715440}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap_Decoration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90061,7 +90147,7 @@ GameObject:
   - component: {fileID: 1485594648}
   - component: {fileID: 1485594650}
   - component: {fileID: 1485594649}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap_Decoration_No_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90703,7 +90789,7 @@ GameObject:
   - component: {fileID: 2042771376}
   - component: {fileID: 2042771378}
   - component: {fileID: 2042771377}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap_Wall_Decoration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
