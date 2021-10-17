@@ -10,6 +10,12 @@ public class PlayerController : MonoBehaviour
     private Vector2 playerDirection;
     [SerializeField] private GameObject flashLight;
     private float rotateDegree = 90f;
+    public AudioClip footsteps;
+
+    public void AudioPlay(AudioClip clip)
+    {
+        AudioSource.PlayClipAtPoint(clip,transform.position);
+    }
 
     void Start()
     { 
@@ -36,6 +42,7 @@ public class PlayerController : MonoBehaviour
     {
         //anything that must be applied to rb2d must be applied in fixed update
         rigBod.velocity = new Vector2(playerDirection.x * playerSpeed, playerDirection.y * playerSpeed);
+        AudioPlay(footsteps);
     }
 
     ////////////////////////////////////Flashlight stuff/////////////////////////////////////////////////

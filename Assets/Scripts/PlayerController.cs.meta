@@ -3,7 +3,9 @@ guid: db89e37ef519e4cecb3d02f967356f1e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - flashLight: {instanceID: 0}
+  - footsteps: {fileID: 8300000, guid: 2035899fd75d03740b7db7317909c05f, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
