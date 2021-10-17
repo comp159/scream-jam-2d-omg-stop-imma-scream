@@ -10,11 +10,12 @@ public class PlayerController : MonoBehaviour
     private Vector2 playerDirection;
     [SerializeField] private GameObject flashLight;
     private float rotateDegree = 90f;
-    public AudioClip footsteps;
+    [SerializeField] private AudioClip footsteps;
 
     public void AudioPlay(AudioClip clip)
     {
         AudioSource.PlayClipAtPoint(clip,transform.position);
+        
     }
 
     void Start()
