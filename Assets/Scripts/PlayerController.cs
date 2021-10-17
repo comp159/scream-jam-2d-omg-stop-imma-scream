@@ -42,7 +42,11 @@ public class PlayerController : MonoBehaviour
     {
         //anything that must be applied to rb2d must be applied in fixed update
         rigBod.velocity = new Vector2(playerDirection.x * playerSpeed, playerDirection.y * playerSpeed);
-        AudioPlay(footsteps);
+        if (playerDirection.x != 0 && playerDirection.y != 0) 
+        {
+            AudioPlay(footsteps);
+        }
+        
     }
 
     ////////////////////////////////////Flashlight stuff/////////////////////////////////////////////////

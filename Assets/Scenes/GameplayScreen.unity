@@ -89937,6 +89937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 10
   flashLight: {fileID: 48762633}
+  footsteps: {fileID: 8300000, guid: 2035899fd75d03740b7db7317909c05f, type: 3}
 --- !u!61 &1231911489
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -90515,7 +90516,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 69dd193fae2c74c8880361e5996fa3a8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1ea9a33754b03544b9ebd3c8b02609b1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
