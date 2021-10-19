@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
         
         PowerFlashLight(); //checks for when the user is turning on and off the flashlight
         MoveFlashLight(); //checks for when the user is rotating the flashlight (only while it is on)
+        PlayFootstepSounds();
     }
 
     void FixedUpdate()
@@ -47,6 +48,27 @@ public class PlayerController : MonoBehaviour
     {
         //anything that must be applied to rb2d must be applied in fixed update
         rigBod.velocity = new Vector2(playerDirection.x * playerSpeed, playerDirection.y * playerSpeed);
+        /*if (playerDirection.x != 0 && playerDirection.y != 0) 
+        {
+            _audioSource.clip = footsteps;
+            if (!_audioSource.isPlaying)
+            {
+                _audioSource.Play();
+            }
+            //AudioPlay(footsteps);
+        }
+        else
+        {
+            if (_audioSource.isPlaying)
+            {
+                _audioSource.Pause();
+            }
+        }*/
+        
+    }
+
+    private void PlayFootstepSounds()
+    {
         if (playerDirection.x != 0 && playerDirection.y != 0) 
         {
             _audioSource.clip = footsteps;
@@ -63,7 +85,6 @@ public class PlayerController : MonoBehaviour
                 _audioSource.Pause();
             }
         }
-        
     }
 
     ////////////////////////////////////Flashlight stuff/////////////////////////////////////////////////
