@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject flashLight;
     private float rotateDegree = 90f;
     [SerializeField] private AudioClip footsteps;
+    private AudioSource _audioSource;
 
     public void AudioPlay(AudioClip clip)
     {
@@ -22,6 +23,9 @@ public class PlayerController : MonoBehaviour
     { 
         rigBod = GetComponent<Rigidbody2D>();
         flashLight.SetActive(false);
+        _audioSource = GetComponent<AudioSource>();
+        _audioSource.clip = footsteps;
+        _audioSource.loop = true;
     }
 
     // Update is called once per frame
@@ -45,7 +49,19 @@ public class PlayerController : MonoBehaviour
         rigBod.velocity = new Vector2(playerDirection.x * playerSpeed, playerDirection.y * playerSpeed);
         if (playerDirection.x != 0 && playerDirection.y != 0) 
         {
-            AudioPlay(footsteps);
+            _audioSource.clip = footsteps;
+            if (!_audioSource.isPlaying)
+            {
+                _audioSource.Play();
+            }
+            //AudioPlay(footsteps);
+        }
+        else
+        {
+            if (_audioSource.isPlaying)
+            {
+                _audioSource.Pause();
+            }
         }
         
     }
