@@ -23,4 +23,9 @@ public class TitleScreenController : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName: "GameplayScreen");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
