@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private float rotateDegree = 90f;
     [SerializeField] private AudioClip footsteps;
     private AudioSource _audioSource;
+    public Animator animator;
 
     public void AudioPlay(AudioClip clip)
     {
@@ -37,6 +38,8 @@ public class PlayerController : MonoBehaviour
         // .normalized will ensure consistency of players movements
         playerDirection = new Vector2(directionX, directionY).normalized;
 
+        
+
 
         PowerFlashLight(); //checks for when the user is turning on and off the flashlight
         MoveFlashLight(); //checks for when the user is rotating the flashlight (only while it is on)
@@ -48,6 +51,11 @@ public class PlayerController : MonoBehaviour
     {
         //anything that must be applied to rb2d must be applied in fixed update
         rigBod.velocity = new Vector2(playerDirection.x * playerSpeed, playerDirection.y * playerSpeed);
+        
+        //animation stuff
+        animator.SetFloat("Horizontal", playerDirection.x);
+        animator.SetFloat("Vertical", playerDirection.y);
+        animator.SetFloat("Speed", playerDirection.sqrMagnitude);
         /*if (playerDirection.x != 0 && playerDirection.y != 0) 
         {
             _audioSource.clip = footsteps;
