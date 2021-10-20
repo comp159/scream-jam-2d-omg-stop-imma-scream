@@ -9,6 +9,7 @@ public class EnemyBehavior : MonoBehaviour
     private bool playerDead = false;
     private Transform prey;
     
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +18,9 @@ public class EnemyBehavior : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (Vector2.Distance(transform.position, prey.position) > 50)
-        {
-            //play screaming sound here
-        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -30,6 +28,8 @@ public class EnemyBehavior : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             playerDead = true;
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.PlayOneShot(audio.clip);
         }
     }
 

@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject gameOverText;
     [SerializeField] private GameObject quitButton;
     [SerializeField] private GameObject retryButton;
+    [SerializeField] private GameObject gameOverBackground;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class GameController : MonoBehaviour
         gameOverText.SetActive(false);
         quitButton.SetActive(false);
         retryButton.SetActive(false);
+        gameOverBackground.SetActive(false);
         Time.timeScale = 1;
     }
 
@@ -29,6 +31,7 @@ public class GameController : MonoBehaviour
             gameOverText.SetActive(true);
             quitButton.SetActive(true);
             retryButton.SetActive(true);
+            gameOverBackground.SetActive(true);
             Time.timeScale = 0;
         }
         
