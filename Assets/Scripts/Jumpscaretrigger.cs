@@ -6,6 +6,7 @@ public class Jumpscaretrigger : MonoBehaviour
 {
     [SerializeField]private GameObject Jumpscare;
     [SerializeField] private AudioSource scream;
+    [SerializeField] private int scareChancePercent;
     void Start()
     {
         
@@ -19,7 +20,8 @@ public class Jumpscaretrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player"){
+        int rand = Random.Range(0, 101);
+        if(other.tag == "Player" && rand < scareChancePercent){
             Debug.Log("JS");
             StartCoroutine(EndJumpScare());
             Jumpscare.SetActive(true);
