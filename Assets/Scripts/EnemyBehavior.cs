@@ -10,6 +10,7 @@ public class EnemyBehavior : MonoBehaviour
     //private Transform prey;
     [SerializeField] private AIPath aiPath;
     [SerializeField] private GameObject bloodlust;
+    private CameraController mainCamController;
     
     
     // Start is called before the first frame update
@@ -17,21 +18,25 @@ public class EnemyBehavior : MonoBehaviour
     {
         playerDead = false;
         bloodlust.SetActive(false);
+        mainCamController = FindObjectOfType<CameraController>();
         //prey = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (aiPath.remainingDistance < 7f)
+        if (!mainCamController.GetIsShaking())
         {
-            bloodlust.SetActive(true);
-            aiPath.maxSpeed = 9;
-        }
-        else
-        {
-            bloodlust.SetActive(false);
-            aiPath.maxSpeed = 2;
+            if (aiPath.remainingDistance < 7f)
+            {
+                bloodlust.SetActive(true);
+                aiPath.maxSpeed = 9;
+            }
+            else
+            {
+                bloodlust.SetActive(false);
+                aiPath.maxSpeed = 2;
+            }
         }
     }
 
@@ -48,5 +53,10 @@ public class EnemyBehavior : MonoBehaviour
     public bool GetPlayerStatus()
     {
         return playerDead;
+    }
+
+    public void SetAISpeed(float newSpeed)
+    {
+        aiPath.maxSpeed = newSpeed;
     }
 }

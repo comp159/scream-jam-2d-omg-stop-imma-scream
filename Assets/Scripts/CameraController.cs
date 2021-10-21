@@ -7,11 +7,13 @@ public class CameraController : MonoBehaviour
     private bool isShaking = false;
     private float shakeDuration = 3.5f;
     private Vector3 startPos;
-    private PlayerController playerController;
+    private PlayerController _playerController;
+    private EnemyBehavior _enemyBehavior;
     // Start is called before the first frame update
     void Start()
     {
-        playerController = FindObjectOfType<PlayerController>();
+        _playerController = FindObjectOfType<PlayerController>();
+        _enemyBehavior = FindObjectOfType<EnemyBehavior>();
     }
 
     // Update is called once per frame
@@ -28,7 +30,8 @@ public class CameraController : MonoBehaviour
             {
                 transform.position = startPos;
                 isShaking = false;
-                playerController.playerSpeed = 10;
+                _playerController.playerSpeed = 10;
+                _enemyBehavior.SetAISpeed(2);
             }
         }
     }
@@ -36,8 +39,14 @@ public class CameraController : MonoBehaviour
     public void StartShake()
     {
         startPos = transform.position;
-        playerController.playerSpeed = 0;
+        _playerController.playerSpeed = 0;
+        _enemyBehavior.SetAISpeed(0);
         shakeDuration = 3.5f;
         isShaking = true;
+    }
+
+    public bool GetIsShaking()
+    {
+        return isShaking;
     }
 }
