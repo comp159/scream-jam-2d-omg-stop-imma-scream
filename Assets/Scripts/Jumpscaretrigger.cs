@@ -12,12 +12,16 @@ public class Jumpscaretrigger : MonoBehaviour
     private GameObject jumpScareBackground;
     private SpriteRenderer jumpScareRenderer;
     private SpriteRenderer jumpScareBackgroundRenderer;
+    private bool isActive = false;
+    private CameraController mainCamController;
     void Start()
     {
         jumpScare = GameObject.FindGameObjectWithTag("JumpScare");
         jumpScareBackground = GameObject.FindGameObjectWithTag("JumpScareBackground");
         jumpScareRenderer = jumpScare.GetComponent<SpriteRenderer>();
         jumpScareBackgroundRenderer = jumpScareBackground.GetComponent<SpriteRenderer>();
+        mainCamController = FindObjectOfType<CameraController>();
+        Debug.Log(scream.clip.length);//2.834467
     }
 
     // Update is called once per frame
@@ -37,13 +41,16 @@ public class Jumpscaretrigger : MonoBehaviour
             //jumpScareBackground.SetActive(true);
             jumpScareRenderer.enabled = true;
             jumpScareBackgroundRenderer.enabled = true;
+            mainCamController.StartShake();
             scream.PlayOneShot(scream.clip);
         }
     }
 
     private IEnumerator EndJumpScare()
     {
+        isActive = true;
         yield return new WaitForSeconds(scream.clip.length);
+        isActive = false;
         Debug.Log("JS End");
         //Jumpscare.SetActive(false);
         //jumpScare.SetActive(false);
@@ -51,4 +58,5 @@ public class Jumpscaretrigger : MonoBehaviour
         jumpScareRenderer.enabled = false;
         jumpScareBackgroundRenderer.enabled = false;
     }
+    
 }

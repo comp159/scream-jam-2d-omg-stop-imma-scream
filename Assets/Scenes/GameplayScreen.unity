@@ -34472,7 +34472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &102811060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34982,6 +34982,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342731512}
   m_CullTransparentMesh: 1
+--- !u!1 &382805681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8667890522326740533, guid: ff5e2ca0ee63a184b9ec99c5c5f55cc8, type: 3}
+  m_PrefabInstance: {fileID: 8667890521870462387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &382805682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382805681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4343259b913c42442b28057e78af30e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &391052166
 GameObject:
   m_ObjectHideFlags: 0
@@ -124152,6 +124169,14 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1694235748}
+    - target: {fileID: 8667890522580706033, guid: ff5e2ca0ee63a184b9ec99c5c5f55cc8, type: 3}
+      propertyPath: m_PointLightInnerRadius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8667890522580706033, guid: ff5e2ca0ee63a184b9ec99c5c5f55cc8, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8667890522580706034, guid: ff5e2ca0ee63a184b9ec99c5c5f55cc8, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
