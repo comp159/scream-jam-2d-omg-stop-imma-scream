@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     private float rotateDegree = 90f;
     [SerializeField] private AudioClip footsteps;
     private AudioSource _audioSource;
+    private Camera cam;
+    private Transform lightAngle;
     public Animator animator;
 
     public void AudioPlay(AudioClip clip)
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         _audioSource.clip = footsteps;
         _audioSource.loop = true;
+        cam = GetComponentInChildren<Camera>();
     }
 
     // Update is called once per frame
@@ -42,7 +45,8 @@ public class PlayerController : MonoBehaviour
 
 
         PowerFlashLight(); //checks for when the user is turning on and off the flashlight
-        MoveFlashLight(); //checks for when the user is rotating the flashlight (only while it is on)
+        //MoveFlashLight(); //checks for when the user is rotating the flashlight (only while it is on)
+        MoveFlashLightWithMouse();
         PlayFootstepSounds();
     }
 
@@ -128,5 +132,16 @@ public class PlayerController : MonoBehaviour
                     flashLight.transform.Rotate(0, 0, -rotateDegree);
                 }
             }
+        }
+
+        void MoveFlashLightWithMouse()
+        {
+            Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+            mousePos.z = 0;
+            Vector3 mouseToPlayerPos = transform.position - mousePos;
+            mouseToPlayerPos.z = 0;
+            //float flashlightAngle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+            float flashlightAngle = (Mathf.Atan2(mouseToPlayerPos.y, mouseToPlayerPos.x) * Mathf.Rad2Deg) + 90;
+            flashLight.transform.rotation = Quaternion.AngleAxis(flashlightAngle, Vector3.forward);
         }
     }
