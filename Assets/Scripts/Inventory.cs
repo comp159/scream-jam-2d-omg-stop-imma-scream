@@ -15,6 +15,8 @@ public class Inventory : MonoBehaviour
     //[SerializeField] private GameObject slot6;
     //[SerializeField] private GameObject slot7;
     //[SerializeField] private GameObject slot8;
+
+    private bool hasKey = false;
     
     // Start is called before the first frame update
     void Start()
@@ -47,6 +49,12 @@ public class Inventory : MonoBehaviour
         if (itemCollision.item1 == 1)
         {
             slot.SetActive(true);
+            hasKey = true;
         }
+    }
+
+    public bool HasKey()
+    {
+        return hasKey;
     }
 }
