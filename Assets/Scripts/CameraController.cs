@@ -5,11 +5,13 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     private bool isShaking = false;
-    private float shakeDuration = 3f;
+    private float shakeDuration = 3.5f;
+    private Vector3 startPos;
+    private PlayerController playerController;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerController = FindObjectOfType<PlayerController>();
     }
 
     // Update is called once per frame
@@ -24,15 +26,18 @@ public class CameraController : MonoBehaviour
             }
             else
             {
-                transform.position = new Vector3(0, 0, -5);
+                transform.position = startPos;
                 isShaking = false;
+                playerController.playerSpeed = 10;
             }
         }
     }
 
     public void StartShake()
     {
-        shakeDuration = 3f;
+        startPos = transform.position;
+        playerController.playerSpeed = 0;
+        shakeDuration = 3.5f;
         isShaking = true;
     }
 }
