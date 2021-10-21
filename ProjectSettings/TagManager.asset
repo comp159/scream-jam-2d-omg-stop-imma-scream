@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Stairs
   - Interactable
+  - JumpScare
+  - JumpScareBackground
   layers:
   - Default
   - TransparentFX
