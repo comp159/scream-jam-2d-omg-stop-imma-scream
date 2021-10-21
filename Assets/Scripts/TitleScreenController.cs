@@ -6,10 +6,17 @@ using UnityEngine.SceneManagement;
 public class TitleScreenController : MonoBehaviour
 {
     [SerializeField] private GameObject playButton;
+    [SerializeField] private GameObject rulesButton;
     // Start is called before the first frame update
     void Start()
     {
         playButton.SetActive(true);
+        Time.timeScale = 1;
+    }
+
+    void ActivateIns()
+    {
+        rulesButton.SetActive(true);
         Time.timeScale = 1;
     }
 
@@ -22,6 +29,11 @@ public class TitleScreenController : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene(sceneName: "GameplayScreen");
+    }
+
+    public void ActivateInstruction()
+    {
+        SceneManager.LoadScene(sceneName: "InstructionsPage");
     }
 
     public void QuitGame()
