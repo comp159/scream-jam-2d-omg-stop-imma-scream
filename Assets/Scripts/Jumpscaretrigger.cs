@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class Jumpscaretrigger : MonoBehaviour
 {
-    [SerializeField] private GameObject Jumpscare;
     [SerializeField] private AudioSource scream;
     [SerializeField] private int scareChancePercent;
+    [SerializeField] private Light2D vingette;
 
     private GameObject jumpScare;
     private GameObject jumpScareBackground;
@@ -41,6 +42,7 @@ public class Jumpscaretrigger : MonoBehaviour
             //jumpScareBackground.SetActive(true);
             jumpScareRenderer.enabled = true;
             jumpScareBackgroundRenderer.enabled = true;
+            vingette.enabled = true;
             mainCamController.StartShake();
             scream.PlayOneShot(scream.clip);
         }
@@ -57,6 +59,7 @@ public class Jumpscaretrigger : MonoBehaviour
         //jumpScareBackground.SetActive(false);
         jumpScareRenderer.enabled = false;
         jumpScareBackgroundRenderer.enabled = false;
+        vingette.enabled = false;
     }
     
 }
