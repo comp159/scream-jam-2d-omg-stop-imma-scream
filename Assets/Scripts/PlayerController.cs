@@ -55,8 +55,15 @@ public class PlayerController : MonoBehaviour
             _audioSource.Play();
             
         }
-        
-        PowerFlashLight(); //checks for when the user is turning on and off the flashlight
+
+        if (Jumpscaretrigger.GetIsActive()) 
+        {
+            flashLight.SetActive(false);
+        }
+        else
+        {
+            PowerFlashLight();//checks for when the user is turning on and off the flashlight
+        }
         //MoveFlashLight(); //checks for when the user is rotating the flashlight (only while it is on)
         MoveFlashLightWithMouse();
         PlayFootstepSounds();

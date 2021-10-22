@@ -13,7 +13,7 @@ public class Jumpscaretrigger : MonoBehaviour
     private GameObject jumpScareBackground;
     private SpriteRenderer jumpScareRenderer;
     private SpriteRenderer jumpScareBackgroundRenderer;
-    private bool isActive = false;
+    private static bool isActive = false;
     private CameraController mainCamController;
     void Start()
     {
@@ -61,5 +61,9 @@ public class Jumpscaretrigger : MonoBehaviour
         jumpScareBackgroundRenderer.enabled = false;
         vingette.enabled = false;
     }
-    
+
+    public static bool GetIsActive()
+    {
+        return isActive;
+    }
 }

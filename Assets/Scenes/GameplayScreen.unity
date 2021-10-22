@@ -125119,6 +125119,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1694235748}
+    - target: {fileID: 8667890521919218362, guid: ff5e2ca0ee63a184b9ec99c5c5f55cc8, type: 3}
+      propertyPath: m_TagString
+      value: Flashlight
+      objectReference: {fileID: 0}
     - target: {fileID: 8667890522580706033, guid: ff5e2ca0ee63a184b9ec99c5c5f55cc8, type: 3}
       propertyPath: m_PointLightInnerRadius
       value: 0.5
