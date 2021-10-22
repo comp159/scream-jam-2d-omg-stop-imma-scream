@@ -113032,8 +113032,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.64378214}
   m_AnchorMax: {x: 0.528, y: 0.64378214}
-  m_AnchoredPosition: {x: -4, y: -18.6758}
-  m_SizeDelta: {x: 56.9123, y: 33.3517}
+  m_AnchoredPosition: {x: -4.9, y: -23.1}
+  m_SizeDelta: {x: 88.7103, y: 43.951}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &810061197
 GameObject:
@@ -113175,8 +113175,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -113211,7 +113211,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -1.6169434, w: 0}
+  m_margin: {x: -10.705231, y: 0, z: -1.6169434, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -113239,10 +113239,10 @@ RectTransform:
   m_Father: {fileID: 1633887793}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.51747596, y: 0.81712836}
+  m_AnchorMin: {x: 0.5, y: 0.81712836}
   m_AnchorMax: {x: 0.51747596, y: 0.81712836}
-  m_AnchoredPosition: {x: -6, y: -43}
-  m_SizeDelta: {x: 88.5813, y: 43.541}
+  m_AnchoredPosition: {x: 5.5, y: -43}
+  m_SizeDelta: {x: 75.5813, y: 43.541}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &940336934
 GameObject:
@@ -119546,8 +119546,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -121136,8 +121136,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -121221,9 +121221,9 @@ RectTransform:
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.3107, y: 9.3755}
-  m_SizeDelta: {x: 77.781, y: 28.251}
+  m_AnchorMax: {x: 0.528, y: 0.5}
+  m_AnchoredPosition: {x: -4.7739, y: 3.1926}
+  m_SizeDelta: {x: 88.96, y: 40.6169}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1977921626
 MonoBehaviour:

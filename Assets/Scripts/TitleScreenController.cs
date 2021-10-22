@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class TitleScreenController : MonoBehaviour
 {
     [SerializeField] private GameObject playButton;
-    [SerializeField] private GameObject rulesButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +15,8 @@ public class TitleScreenController : MonoBehaviour
 
     void ActivateIns()
     {
-        rulesButton.SetActive(true);
-        Time.timeScale = 1;
+        //rulesButton.SetActive(true);
+       //Time.timeScale = 1;
     }
 
     // Update is called once per frame
