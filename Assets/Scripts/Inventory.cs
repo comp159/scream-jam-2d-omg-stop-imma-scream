@@ -7,8 +7,7 @@ public class Inventory : MonoBehaviour
     public bool inventoryEnabled;
     [SerializeField] private GameObject inventory;
     [SerializeField] private GameObject slot;
-    //[SerializeField] private GameObject slot1;
-    //[SerializeField] private GameObject slot2;
+    [SerializeField] private GameObject slot2;
     //[SerializeField] private GameObject slot3;
     //[SerializeField] private GameObject slot4;
     //[SerializeField] private GameObject slot5;
@@ -22,6 +21,8 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         slot.SetActive(false);
+        slot2.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -50,6 +51,11 @@ public class Inventory : MonoBehaviour
         {
             slot.SetActive(true);
             hasKey = true;
+        }
+        
+        if (itemCollision.item2 == 1)
+        {
+            slot2.SetActive(true);
         }
     }
 
