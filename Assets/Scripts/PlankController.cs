@@ -17,7 +17,7 @@ public class PlankController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.Space)) && (itemCollision.item2 == 1))
+        if ((Input.GetKeyDown(KeyCode.Space)) && (itemCollision.item2 >= 1))
         {
             plank.SetActive(true);
             square.SetActive(false);
