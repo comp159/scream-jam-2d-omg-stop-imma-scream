@@ -11,6 +11,8 @@ TagManager:
   - Interactable
   - JumpScare
   - JumpScareBackground
+  - Key
+  - Plank
   layers:
   - Default
   - TransparentFX
