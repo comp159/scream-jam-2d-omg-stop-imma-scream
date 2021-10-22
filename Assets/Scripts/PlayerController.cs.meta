@@ -6,6 +6,8 @@ MonoImporter:
   defaultReferences:
   - flashLight: {instanceID: 0}
   - footsteps: {fileID: 8300000, guid: 2035899fd75d03740b7db7317909c05f, type: 3}
+  - fkeyboard: {fileID: 8300000, guid: cc66de74df061fb46a95f4ecdb16ae78, type: 3}
+  - animator: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

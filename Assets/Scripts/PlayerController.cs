@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject flashLight;
     private float rotateDegree = 90f;
     [SerializeField] private AudioClip footsteps;
+    [SerializeField] private AudioClip fkeyboard;
     private AudioSource _audioSource;
     private Camera cam;
     private Transform lightAngle;
@@ -20,6 +21,13 @@ public class PlayerController : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(clip, transform.position);
 
+    }
+
+    private void Awake()
+    {
+        _audioSource = gameObject.AddComponent<AudioSource>();// Add an AudioSource component to the object
+        _audioSource.playOnAwake = false;//Setting not to play sound effects at the beginning
+        fkeyboard = Resources.Load<AudioClip>("Audio/light switch"); // load the sound file
     }
 
     void Start()
@@ -41,9 +49,13 @@ public class PlayerController : MonoBehaviour
         // .normalized will ensure consistency of players movements
         playerDirection = new Vector2(directionX, directionY).normalized;
 
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            _audioSource.clip = fkeyboard;
+            _audioSource.Play();
+            
+        }
         
-
-
         PowerFlashLight(); //checks for when the user is turning on and off the flashlight
         //MoveFlashLight(); //checks for when the user is rotating the flashlight (only while it is on)
         MoveFlashLightWithMouse();
