@@ -26,8 +26,8 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         _audioSource = gameObject.AddComponent<AudioSource>();// Add an AudioSource component to the object
-        _audioSource.playOnAwake = false;//Setting not to play sound effects at the beginning
-        fkeyboard = Resources.Load<AudioClip>("Audio/light switch"); // load the sound file
+        //_audioSource.playOnAwake = false;//Setting not to play sound effects at the beginning
+        //fkeyboard = Resources.Load<AudioClip>("Audio/light switch"); // load the sound file
     }
 
     void Start()
@@ -48,11 +48,12 @@ public class PlayerController : MonoBehaviour
         float directionX = Input.GetAxisRaw("Horizontal");
         // .normalized will ensure consistency of players movements
         playerDirection = new Vector2(directionX, directionY).normalized;
-
+        AudioSource flashLightSource = gameObject.AddComponent<AudioSource>();
         if (Input.GetKeyDown(KeyCode.F))
         {
-            _audioSource.clip = fkeyboard;
-            _audioSource.Play();
+            flashLightSource.clip = fkeyboard;
+            flashLightSource.PlayOneShot(fkeyboard);
+            Debug.Log("light on");
             
         }
 
