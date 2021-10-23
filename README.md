@@ -8,6 +8,10 @@
 - Samantha: Inventory system and item interactions
 - Ryan: Audio cues and jumpscares
 
+# Resources Used:
+-----------------
+- A * Algorithm Import: https://arongranberg.com/astar/
+
 # What is Nyctophobia?
 -----------------------
 Nyctophobia is a top-down 2D Horror game that capitalizes on the fear of the dark and giving the player a feeling of uselessness in limiting their capabilities. You play as
